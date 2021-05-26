@@ -1,0 +1,14 @@
+<strong>Nova aposta comprada</strong>
+
+<p>{{ name }}, a compra de suas apostas foi realizada com sucesso!</p>
+
+<ul>
+    @each(bet in bets)
+    <li style="display: flex; flex-direction: column">
+        <strong style="color: {{ games[bet.game_id - 1].color }}">{{ games[bet.game_id - 1].type }}</strong>
+        <span>{{ bet.numbers }}</span>
+        <span>Preço: {{ games[bet.game_id - 1].price }}</span>
+        <br />
+    </li>
+    @endeach
+</ul>
